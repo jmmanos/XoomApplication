@@ -28,11 +28,16 @@ extension CountriesCollectionViewController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return CountryDataSource.shared.count
     }
     
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath)
+        
+        if let countryCell = cell as? CountryCollectionViewCell, let country = CountryDataSource.shared[indexPath.row] {
+            // configure cell
+            countryCell.setCountry(country)
+        }
         
         return cell
     }

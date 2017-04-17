@@ -43,14 +43,14 @@ public final class APIManager {
     
     
     /// given country code, fetch country
-    public static func create(for code: CountryCode, returnQueue: DispatchQueue = .main, handler: @escaping (APIResult<Country,Error>)->()) {
+    public static func create(for code: CountryCode, returnQueue: DispatchQueue = .main, handler: @escaping (APIResult<Country.LoadableProperties,Error>)->()) {
         guard let url = URL(string: baseURL + code.rawValue) else {
             handler(APIResult.error(APIError.invalidURL)); return
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             queue.async {
-                let result: APIResult<Country, Error>
+                let result: APIResult<Country.LoadableProperties, Error>
                 
                 do {
                     guard let data = data else { throw error ?? APIError.unknownError }
@@ -65,6 +65,7 @@ public final class APIManager {
                         let country = dict["country"] as? Dictionary<String,AnyObject>,
                         let cCode = country["countryCode"] as? String,
                         let countryCode = CountryCode(rawValue: cCode),
+                        countryCode == code,
                         let feesChanged = country["feesChanged"] as? String {
                         
                         let feesChangedDate: Date
@@ -75,8 +76,8 @@ public final class APIManager {
                             throw APIError.invalidDateString
                         }
                         
-                        let country = Country(isoCode: countryCode, receiveCurrencyCode: recCode, sendFxRate: fxRate, feesChanged: feesChangedDate)
-                        result = APIResult.success(country)
+                        let properties = Country.LoadableProperties(recCode, sendFxRate: fxRate, feesChanged: feesChangedDate)
+                        result = APIResult.success(properties)
                     } else {
                         throw APIError.unknownError
                     }

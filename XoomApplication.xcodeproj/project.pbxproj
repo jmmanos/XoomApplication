@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */; };
-		F02B47F81EA49F5B00C407D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B47F71EA49F5B00C407D9 /* ViewController.swift */; };
 		F02B47FB1EA49F5B00C407D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02B47F91EA49F5B00C407D9 /* Main.storyboard */; };
 		F02B47FD1EA49F5B00C407D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */; };
 		F02B48001EA49F5B00C407D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,9 @@
 		F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48181EA4A03B00C407D9 /* CountryCode.swift */; };
 		F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B481B1EA4A1F200C407D9 /* APIManager.swift */; };
 		F02B481F1EA4A82E00C407D9 /* CountriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */; };
+		F02B48221EA4AD0600C407D9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48211EA4AD0600C407D9 /* DataSource.swift */; };
+		F02B48241EA4ADE700C407D9 /* Country+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */; };
+		F02B48291EA4B76700C407D9 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,6 @@
 /* Begin PBXFileReference section */
 		F02B47F21EA49F5B00C407D9 /* XoomApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XoomApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F02B47F71EA49F5B00C407D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F02B47FA1EA49F5B00C407D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F02B47FF1EA49F5B00C407D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,9 @@
 		F02B48181EA4A03B00C407D9 /* CountryCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
 		F02B481B1EA4A1F200C407D9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewController.swift; sourceTree = "<group>"; };
+		F02B48211EA4AD0600C407D9 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Country+DataSource.swift"; sourceTree = "<group>"; };
+		F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +89,13 @@
 		F02B47F41EA49F5B00C407D9 /* XoomApplication */ = {
 			isa = PBXGroup;
 			children = (
+				F02B48271EA4B75700C407D9 /* Views */,
+				F02B48201EA4ACE000C407D9 /* Protocols */,
 				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
 				F02B481D1EA4A80B00C407D9 /* ViewControllers */,
 				F02B481A1EA4A1E200C407D9 /* API */,
 				F02B48151EA49FE100C407D9 /* Model */,
-				F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */,
-				F02B47F71EA49F5B00C407D9 /* ViewController.swift */,
-				F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */,
-				F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */,
-				F02B48011EA49F5B00C407D9 /* Info.plist */,
+				F02B482A1EA4B8B400C407D9 /* SupportingFiles */,
 			);
 			path = XoomApplication;
 			sourceTree = "<group>";
@@ -112,6 +114,7 @@
 			children = (
 				F02B48161EA49FF400C407D9 /* Country.swift */,
 				F02B48181EA4A03B00C407D9 /* CountryCode.swift */,
+				F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -130,6 +133,33 @@
 				F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F02B48201EA4ACE000C407D9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F02B48211EA4AD0600C407D9 /* DataSource.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F02B48271EA4B75700C407D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F02B482A1EA4B8B400C407D9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */,
+				F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */,
+				F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */,
+				F02B48011EA49F5B00C407D9 /* Info.plist */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02B47F81EA49F5B00C407D9 /* ViewController.swift in Sources */,
+				F02B48221EA4AD0600C407D9 /* DataSource.swift in Sources */,
 				F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */,
 				F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */,
+				F02B48291EA4B76700C407D9 /* CountryCollectionViewCell.swift in Sources */,
 				F02B481F1EA4A82E00C407D9 /* CountriesCollectionViewController.swift in Sources */,
+				F02B48241EA4ADE700C407D9 /* Country+DataSource.swift in Sources */,
 				F02B48171EA49FF400C407D9 /* Country.swift in Sources */,
 				F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */,
 			);
