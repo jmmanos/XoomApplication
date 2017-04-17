@@ -8,7 +8,8 @@
 
 import SceneKit
 
-public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
+/// Simple scenekit scene to demonstrate currency exchange
+public final class CurrencyScene: SCNScene {
     private let currencyRate: Double
     public private(set) var cameraNode: SCNNode!
     
@@ -128,13 +129,9 @@ public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
         material.fresnelExponent = 4
         material.diffuse.contents = UIColor.yellow
         material.locksAmbientWithDiffuse = true
-        //material.normal.contents = normalMap
-        //material.roughness.contents = normalMap
         material.reflective.contents = UIColor.white
         material.reflective.intensity = 0.1
         material.isDoubleSided = true
-        //material.multiply.contents = UIColor(white: 0.9, alpha: 0.6)
-        //material.metalness.contents = UIColor.yellow
         geometry.firstMaterial = material
         
         let node = SCNNode(geometry: geometry)
@@ -159,7 +156,6 @@ public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
     
     func createLight() -> SCNNode {
         let lightNode = SCNNode()
-        //lightNode.orientation = SCNQuaternion(x: 0, y: 0, z: 1, w: 0)
         lightNode.light = SCNLight()
         lightNode.light!.type = .spot
         lightNode.light!.spotInnerAngle = 45
@@ -173,10 +169,7 @@ public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
         lightNode.light!.shadowMapSize = CGSize(width: 5000, height: 5000)
         
         lightNode.light!.shadowColor = UIColor.darkGray.withAlphaComponent(0.7)
-        //lightNode.light!.shadowBias = 2
-        //lightNode.light!.shadowSampleCount = 2
         lightNode.light!.intensity = 700
-        //lightNode.light!.shadowMode = .forward
         lightNode.light!.temperature = 6000
         lightNode.light!.castsShadow = true
         return lightNode

@@ -20,6 +20,7 @@ public enum APIError: Error {
     case invalidURL
     
     case unknownError
+    
     /// Date string parsing error
     case invalidDateString
 }
@@ -38,9 +39,9 @@ public final class APIManager {
                                    .withColonSeparatorInTime]
         return formatter
     }()
+    
     /// Xoom API base countries url string
     private static let baseURL = "http://www.xoom.com/mapi/v1/countries/"
-    
     
     /// given country code, fetch country
     public static func create(for code: CountryCode, returnQueue: DispatchQueue = .main, handler: @escaping (APIResult<Country.LoadableProperties,Error>)->()) {
@@ -48,7 +49,10 @@ public final class APIManager {
             handler(APIResult.error(APIError.invalidURL)); return
         }
         
+        // data task used to perform get request
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            // try to perform as much as possible in background
+            // JSON and formatter both very expensive
             queue.async {
                 let result: APIResult<Country.LoadableProperties, Error>
                 
@@ -85,11 +89,13 @@ public final class APIManager {
                     result = APIResult.error(error)
                 }
                 
+                // call handler on return queue
                 returnQueue.async {
                     handler(result)
                 }
             }
         }
+        // start the download
         task.resume()
     }
 }

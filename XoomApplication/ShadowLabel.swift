@@ -8,26 +8,34 @@
 
 import UIKit
 
+/// Label subclass to add shadow functionality and design
 @IBDesignable
-public class ShadowLabel: UILabel {
+public final class ShadowLabel: UILabel {
+    /// main background shadow color
     @IBInspectable
     public var layerShadowColor: UIColor? = .black {
         didSet {
             layer.shadowColor = layerShadowColor?.cgColor
         }
     }
+    
+    /// offset from center
     @IBInspectable
     public var layerShadowOffset: CGSize = .zero {
         didSet {
             layer.shadowOffset = layerShadowOffset
         }
     }
+    
+    /// radius of the shadow
     @IBInspectable
     public var shadowRadius: CGFloat = 0 {
         didSet {
             layer.shadowRadius = shadowRadius
         }
     }
+    
+    /// opacity of the shadow
     @IBInspectable
     public var shadowOpacity: Float = 0 {
         didSet {
@@ -41,6 +49,8 @@ public class ShadowLabel: UILabel {
         let rect = bounds
         let shadowRect = rect.insetBy(dx: rect.width/12, dy: rect.height/8)
         
+        // set shadowPath for performance
+        // disable actions for implicit animation
         CATransaction.setDisableActions(true)
         CATransaction.begin()
         layer.shadowPath = UIBezierPath(roundedRect: shadowRect, cornerRadius: shadowRect.height/2).cgPath

@@ -8,16 +8,21 @@
 
 import UIKit
 
+/// Basic uiview subclass for some visual effects
 public final class GradientView: UIView {
+    /// Struct to store visual properties of the gradient
     public struct VisualProperties {
         var colors: [UIColor]
         var startPoint: CGFloat
         var endPoint: CGFloat
     }
+    
+    /// Override for UIView layer setup
     public override class var layerClass: AnyClass {
         return CAGradientLayer.self
     }
     
+    /// the visual properties struct of the view
     public var properties = VisualProperties(colors: [], startPoint: 0, endPoint: 0) {
         didSet {
             gradientLayer.colors = properties.colors.map { $0.cgColor }
@@ -26,7 +31,7 @@ public final class GradientView: UIView {
         }
     }
     
-    public var gradientLayer: CAGradientLayer {
+    private var gradientLayer: CAGradientLayer {
         return layer as! CAGradientLayer
     }
 }

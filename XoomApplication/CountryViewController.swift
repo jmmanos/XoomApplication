@@ -10,16 +10,22 @@ import UIKit
 import SceneKit
 
 /// Displays important country info
-public class CountryViewController: UIViewController {
-    @IBOutlet weak var gradientView: GradientView!
-    @IBOutlet weak var receiveCurrencyCodeLabel: UILabel!
-    @IBOutlet weak var sendFxRateLabel: UILabel!
-    @IBOutlet weak var feesChangedDateLabel: UILabel!
-    @IBOutlet weak var sceneView: SCNView!
+public final class CountryViewController: UIViewController {
+    // UIOutlets 
     
+    @IBOutlet private weak var gradientView: GradientView!
+    @IBOutlet private weak var receiveCurrencyCodeLabel: UILabel!
+    @IBOutlet private weak var sendFxRateLabel: UILabel!
+    @IBOutlet private weak var feesChangedDateLabel: UILabel!
+    @IBOutlet private weak var sceneView: SCNView!
+    
+    /// current country on display
     private var country: Country!
+    
+    /// flag to show/hide labels
     private var hiddenLabels:  Bool = true
     
+    /// attempt to keep viewDidLoad light
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +38,7 @@ public class CountryViewController: UIViewController {
         sendFxRateLabel?.alpha = 0
         feesChangedDateLabel?.alpha = 0
         
-        sceneView.isPlaying = false
-        
+        // perform API call if not loaded
         if !country.isLoaded {
             country.load({ [weak self] (result:APIResult<Country.LoadableProperties, Error>) in
                 guard let weakSelf = self else { return }
@@ -57,10 +62,6 @@ public class CountryViewController: UIViewController {
         let duration: Double = animated ? 1.2 : 0.2
         let alpha: CGFloat = hide ? 0.0 : 1.0
         
-        if sceneView.isPlaying && hide {
-            sceneView.isPlaying = false
-        }
-        
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [UIViewAnimationOptions.beginFromCurrentState], animations: { [weak self] in
             guard let weakSelf = self else { return }
             weakSelf.receiveCurrencyCodeLabel?.alpha = alpha
@@ -69,7 +70,6 @@ public class CountryViewController: UIViewController {
             }, completion: { [weak self] completed in
                 if completed, let weakSelf = self {
                     weakSelf.hiddenLabels = hide
-                    weakSelf.sceneView.isPlaying = hide
                 }
         })
     }
@@ -80,6 +80,10 @@ public class CountryViewController: UIViewController {
         if !hiddenLabels {
             showLabels(hide: true, animated: false)
         }
+        
+        if !(sceneView.scene?.isPaused ?? true) {
+            sceneView.scene?.isPaused = true
+        }
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -88,8 +92,13 @@ public class CountryViewController: UIViewController {
         if country.isLoaded && hiddenLabels {
             showLabels()
         }
+        
+        if let scene = sceneView.scene, scene.isPaused {
+            scene.isPaused = false
+        }
     }
     
+    /// internal date fromatter to turn date into string
     private static let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
@@ -97,6 +106,7 @@ public class CountryViewController: UIViewController {
         return f
     }()
     
+    /// configure UI elements for current properties
     private func configure(for properties: Country.LoadableProperties) {
         guard let currCode = properties.receiveCurrencyCode,
             let rate = properties.sendFxRate,
@@ -117,6 +127,7 @@ public class CountryViewController: UIViewController {
         }
     }
     
+    /// creator pattern for dependancy injection of country. Shouldnt be created without a country.
     public static func create(with country: Country) -> CountryViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "country") as! CountryViewController
         vc.country = country

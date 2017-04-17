@@ -10,8 +10,6 @@ import UIKit
 
 /// CollectionViewController to handle all possible countries
 public final class CountriesCollectionViewController: UICollectionViewController {
-    /// Store selected index for later use
-    fileprivate var selectedIndex: IndexPath?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +17,7 @@ public final class CountriesCollectionViewController: UICollectionViewController
         /// Perpetual dislike of nav scroll insets
         collectionView?.contentInset = UIEdgeInsets(top: 72, left: 10, bottom: 8, right: 10)
         
+        // if last country is saved, push vc onto stack ASAP
         if let lastCountry = Country.last {
             let vc = CountryViewController.create(with: lastCountry)
             navigationController?.pushViewController(vc, animated: false)
@@ -39,6 +38,7 @@ extension CountriesCollectionViewController {
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath)
         
+        // configure cell
         if let countryCell = cell as? CountryCollectionViewCell, let country = CountryDataSource.shared[indexPath.row] {
             countryCell.setCountry(country)
         }
@@ -47,14 +47,14 @@ extension CountriesCollectionViewController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let country = CountryDataSource.shared[indexPath.row] else { return }
-        
-        selectedIndex = indexPath
+        // ensure valid index and we have a nav to psuh vc onto
+        guard let country = CountryDataSource.shared[indexPath.row], let nav = navigationController else { return }
         
         // push vc onto nav stack
         let vc = CountryViewController.create(with: country)
-        navigationController?.pushViewController(vc, animated: true)
+        nav.pushViewController(vc, animated: true)
         
+        // save last country initially to store even if data doesnt load
         Country.last = country
     }
 }
