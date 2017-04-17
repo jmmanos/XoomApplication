@@ -17,7 +17,12 @@ public final class CountriesCollectionViewController: UICollectionViewController
         super.viewDidLoad()
         
         /// Perpetual dislike of nav scroll insets
-        collectionView?.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        collectionView?.contentInset = UIEdgeInsets(top: 72, left: 10, bottom: 8, right: 10)
+        
+        if let lastCountry = Country.last {
+            let vc = CountryViewController.create(with: lastCountry)
+            navigationController?.pushViewController(vc, animated: false)
+        }
     }
 }
 
@@ -35,7 +40,6 @@ extension CountriesCollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath)
         
         if let countryCell = cell as? CountryCollectionViewCell, let country = CountryDataSource.shared[indexPath.row] {
-            // configure cell
             countryCell.setCountry(country)
         }
         
@@ -43,9 +47,15 @@ extension CountriesCollectionViewController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let country = CountryDataSource.shared[indexPath.row] else { return }
+        
         selectedIndex = indexPath
         
         // push vc onto nav stack
+        let vc = CountryViewController.create(with: country)
+        navigationController?.pushViewController(vc, animated: true)
+        
+        Country.last = country
     }
 }
 

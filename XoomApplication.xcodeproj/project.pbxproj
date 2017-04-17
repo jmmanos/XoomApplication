@@ -22,6 +22,9 @@
 		F02B482C1EA4BA1D00C407D9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482B1EA4BA1D00C407D9 /* GradientView.swift */; };
 		F02B482E1EA4BB5300C407D9 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */; };
 		F02B48301EA4C13C00C407D9 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482F1EA4C13C00C407D9 /* CountryViewController.swift */; };
+		F02B48321EA4CE2300C407D9 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48311EA4CE2300C407D9 /* Persistable.swift */; };
+		F02B48341EA4CE4400C407D9 /* Country+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48331EA4CE4400C407D9 /* Country+Persistable.swift */; };
+		F02B48361EA4D24000C407D9 /* CurrencyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48351EA4D24000C407D9 /* CurrencyScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		F02B482B1EA4BA1D00C407D9 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
 		F02B482F1EA4C13C00C407D9 /* CountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		F02B48311EA4CE2300C407D9 /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		F02B48331EA4CE4400C407D9 /* Country+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Country+Persistable.swift"; sourceTree = "<group>"; };
+		F02B48351EA4D24000C407D9 /* CurrencyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 				F02B48161EA49FF400C407D9 /* Country.swift */,
 				F02B48181EA4A03B00C407D9 /* CountryCode.swift */,
 				F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */,
+				F02B48331EA4CE4400C407D9 /* Country+Persistable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 		F02B48201EA4ACE000C407D9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F02B48311EA4CE2300C407D9 /* Persistable.swift */,
 				F02B48211EA4AD0600C407D9 /* DataSource.swift */,
 			);
 			name = Protocols;
@@ -156,6 +164,7 @@
 				F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */,
 				F02B482B1EA4BA1D00C407D9 /* GradientView.swift */,
 				F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */,
+				F02B48351EA4D24000C407D9 /* CurrencyScene.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -277,13 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02B482E1EA4BB5300C407D9 /* ShadowLabel.swift in Sources */,
+				F02B48361EA4D24000C407D9 /* CurrencyScene.swift in Sources */,
 				F02B48221EA4AD0600C407D9 /* DataSource.swift in Sources */,
 				F02B48301EA4C13C00C407D9 /* CountryViewController.swift in Sources */,
 				F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */,
 				F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */,
 				F02B48291EA4B76700C407D9 /* CountryCollectionViewCell.swift in Sources */,
+				F02B48321EA4CE2300C407D9 /* Persistable.swift in Sources */,
 				F02B481F1EA4A82E00C407D9 /* CountriesCollectionViewController.swift in Sources */,
 				F02B48241EA4ADE700C407D9 /* Country+DataSource.swift in Sources */,
+				F02B48341EA4CE4400C407D9 /* Country+Persistable.swift in Sources */,
 				F02B48171EA49FF400C407D9 /* Country.swift in Sources */,
 				F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */,
 				F02B482C1EA4BA1D00C407D9 /* GradientView.swift in Sources */,

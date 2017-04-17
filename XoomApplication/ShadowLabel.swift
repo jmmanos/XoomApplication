@@ -39,7 +39,7 @@ public class ShadowLabel: UILabel {
         super.layoutSubviews()
         
         let rect = bounds
-        let shadowRect = rect.insetBy(dx: rect.width/10, dy: rect.height/8)
+        let shadowRect = rect.insetBy(dx: rect.width/12, dy: rect.height/8)
         
         CATransaction.setDisableActions(true)
         CATransaction.begin()

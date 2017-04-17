@@ -25,9 +25,6 @@ public final class CountryCollectionViewCell: UICollectionViewCell {
         backgroundColor = nil
         contentView.clipsToBounds = true
         
-        //label?.adjustsFontSizeToFitWidth = true
-        //label?.minimumScaleFactor = 0.1
-        
         layer.shadowColor = UIColor(white: 0.1, alpha: 0.9).cgColor
         layer.shadowRadius = 3
         layer.shadowOffset = .zero

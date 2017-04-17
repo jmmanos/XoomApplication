@@ -13,7 +13,7 @@ import UIKit
  - holds neccessary UI properties: CountryCode
  - persists to / loads from disk
  */
-public class Country {
+public final class Country {
     public let isoCode: CountryCode
     public private(set) var properties: LoadableProperties
     public var isLoaded: Bool {
