@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */; };
+		F02B47F81EA49F5B00C407D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B47F71EA49F5B00C407D9 /* ViewController.swift */; };
+		F02B47FB1EA49F5B00C407D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02B47F91EA49F5B00C407D9 /* Main.storyboard */; };
+		F02B47FD1EA49F5B00C407D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */; };
+		F02B48001EA49F5B00C407D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */; };
+		F02B480B1EA49F5B00C407D9 /* XoomApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B480A1EA49F5B00C407D9 /* XoomApplicationTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F02B48071EA49F5B00C407D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F02B47EA1EA49F5B00C407D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F02B47F11EA49F5B00C407D9;
+			remoteInfo = XoomApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F02B47F21EA49F5B00C407D9 /* XoomApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XoomApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F02B47F71EA49F5B00C407D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F02B47FA1EA49F5B00C407D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F02B47FF1EA49F5B00C407D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F02B48011EA49F5B00C407D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F02B48061EA49F5B00C407D9 /* XoomApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XoomApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02B480A1EA49F5B00C407D9 /* XoomApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XoomApplicationTests.swift; sourceTree = "<group>"; };
+		F02B480C1EA49F5B00C407D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F02B47EF1EA49F5B00C407D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02B48031EA49F5B00C407D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F02B47E91EA49F5B00C407D9 = {
+			isa = PBXGroup;
+			children = (
+				F02B47F41EA49F5B00C407D9 /* XoomApplication */,
+				F02B48091EA49F5B00C407D9 /* XoomApplicationTests */,
+				F02B47F31EA49F5B00C407D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F02B47F31EA49F5B00C407D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F02B47F21EA49F5B00C407D9 /* XoomApplication.app */,
+				F02B48061EA49F5B00C407D9 /* XoomApplicationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F02B47F41EA49F5B00C407D9 /* XoomApplication */ = {
+			isa = PBXGroup;
+			children = (
+				F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */,
+				F02B47F71EA49F5B00C407D9 /* ViewController.swift */,
+				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
+				F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */,
+				F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */,
+				F02B48011EA49F5B00C407D9 /* Info.plist */,
+			);
+			path = XoomApplication;
+			sourceTree = "<group>";
+		};
+		F02B48091EA49F5B00C407D9 /* XoomApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				F02B480A1EA49F5B00C407D9 /* XoomApplicationTests.swift */,
+				F02B480C1EA49F5B00C407D9 /* Info.plist */,
+			);
+			path = XoomApplicationTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F02B47F11EA49F5B00C407D9 /* XoomApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F02B480F1EA49F5B00C407D9 /* Build configuration list for PBXNativeTarget "XoomApplication" */;
+			buildPhases = (
+				F02B47EE1EA49F5B00C407D9 /* Sources */,
+				F02B47EF1EA49F5B00C407D9 /* Frameworks */,
+				F02B47F01EA49F5B00C407D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XoomApplication;
+			productName = XoomApplication;
+			productReference = F02B47F21EA49F5B00C407D9 /* XoomApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F02B48051EA49F5B00C407D9 /* XoomApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F02B48121EA49F5B00C407D9 /* Build configuration list for PBXNativeTarget "XoomApplicationTests" */;
+			buildPhases = (
+				F02B48021EA49F5B00C407D9 /* Sources */,
+				F02B48031EA49F5B00C407D9 /* Frameworks */,
+				F02B48041EA49F5B00C407D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F02B48081EA49F5B00C407D9 /* PBXTargetDependency */,
+			);
+			name = XoomApplicationTests;
+			productName = XoomApplicationTests;
+			productReference = F02B48061EA49F5B00C407D9 /* XoomApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F02B47EA1EA49F5B00C407D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "John Manos";
+				TargetAttributes = {
+					F02B47F11EA49F5B00C407D9 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 54PH726UK4;
+						ProvisioningStyle = Automatic;
+					};
+					F02B48051EA49F5B00C407D9 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 54PH726UK4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F02B47F11EA49F5B00C407D9;
+					};
+				};
+			};
+			buildConfigurationList = F02B47ED1EA49F5B00C407D9 /* Build configuration list for PBXProject "XoomApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F02B47E91EA49F5B00C407D9;
+			productRefGroup = F02B47F31EA49F5B00C407D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F02B47F11EA49F5B00C407D9 /* XoomApplication */,
+				F02B48051EA49F5B00C407D9 /* XoomApplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F02B47F01EA49F5B00C407D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F02B48001EA49F5B00C407D9 /* LaunchScreen.storyboard in Resources */,
+				F02B47FD1EA49F5B00C407D9 /* Assets.xcassets in Resources */,
+				F02B47FB1EA49F5B00C407D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02B48041EA49F5B00C407D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F02B47EE1EA49F5B00C407D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F02B47F81EA49F5B00C407D9 /* ViewController.swift in Sources */,
+				F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02B48021EA49F5B00C407D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F02B480B1EA49F5B00C407D9 /* XoomApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F02B48081EA49F5B00C407D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F02B47F11EA49F5B00C407D9 /* XoomApplication */;
+			targetProxy = F02B48071EA49F5B00C407D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F02B47F91EA49F5B00C407D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F02B47FA1EA49F5B00C407D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F02B47FF1EA49F5B00C407D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F02B480D1EA49F5B00C407D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F02B480E1EA49F5B00C407D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F02B48101EA49F5B00C407D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 54PH726UK4;
+				INFOPLIST_FILE = XoomApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmmanos.XoomApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F02B48111EA49F5B00C407D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 54PH726UK4;
+				INFOPLIST_FILE = XoomApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmmanos.XoomApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F02B48131EA49F5B00C407D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 54PH726UK4;
+				INFOPLIST_FILE = XoomApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmmanos.XoomApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XoomApplication.app/XoomApplication";
+			};
+			name = Debug;
+		};
+		F02B48141EA49F5B00C407D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 54PH726UK4;
+				INFOPLIST_FILE = XoomApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jmmanos.XoomApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XoomApplication.app/XoomApplication";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F02B47ED1EA49F5B00C407D9 /* Build configuration list for PBXProject "XoomApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F02B480D1EA49F5B00C407D9 /* Debug */,
+				F02B480E1EA49F5B00C407D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F02B480F1EA49F5B00C407D9 /* Build configuration list for PBXNativeTarget "XoomApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F02B48101EA49F5B00C407D9 /* Debug */,
+				F02B48111EA49F5B00C407D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F02B48121EA49F5B00C407D9 /* Build configuration list for PBXNativeTarget "XoomApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F02B48131EA49F5B00C407D9 /* Debug */,
+				F02B48141EA49F5B00C407D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F02B47EA1EA49F5B00C407D9 /* Project object */;
+}
