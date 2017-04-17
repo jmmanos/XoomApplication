@@ -16,6 +16,7 @@
 		F02B48171EA49FF400C407D9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48161EA49FF400C407D9 /* Country.swift */; };
 		F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48181EA4A03B00C407D9 /* CountryCode.swift */; };
 		F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B481B1EA4A1F200C407D9 /* APIManager.swift */; };
+		F02B481F1EA4A82E00C407D9 /* CountriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		F02B48161EA49FF400C407D9 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		F02B48181EA4A03B00C407D9 /* CountryCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
 		F02B481B1EA4A1F200C407D9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +85,12 @@
 		F02B47F41EA49F5B00C407D9 /* XoomApplication */ = {
 			isa = PBXGroup;
 			children = (
+				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
+				F02B481D1EA4A80B00C407D9 /* ViewControllers */,
 				F02B481A1EA4A1E200C407D9 /* API */,
 				F02B48151EA49FE100C407D9 /* Model */,
 				F02B47F51EA49F5B00C407D9 /* AppDelegate.swift */,
 				F02B47F71EA49F5B00C407D9 /* ViewController.swift */,
-				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
 				F02B47FC1EA49F5B00C407D9 /* Assets.xcassets */,
 				F02B47FE1EA49F5B00C407D9 /* LaunchScreen.storyboard */,
 				F02B48011EA49F5B00C407D9 /* Info.plist */,
@@ -119,6 +122,14 @@
 				F02B481B1EA4A1F200C407D9 /* APIManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		F02B481D1EA4A80B00C407D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				F02B47F81EA49F5B00C407D9 /* ViewController.swift in Sources */,
 				F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */,
 				F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */,
+				F02B481F1EA4A82E00C407D9 /* CountriesCollectionViewController.swift in Sources */,
 				F02B48171EA49FF400C407D9 /* Country.swift in Sources */,
 				F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */,
 			);
