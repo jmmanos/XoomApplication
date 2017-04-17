@@ -12,7 +12,7 @@ import SceneKit
 /// Displays important country info
 public class CountryViewController: UIViewController {
     @IBOutlet weak var gradientView: GradientView!
-    @IBOutlet weak var receivedCurrencyCodeLabel: UILabel!
+    @IBOutlet weak var receiveCurrencyCodeLabel: UILabel!
     @IBOutlet weak var sendFxRateLabel: UILabel!
     @IBOutlet weak var feesChangedDateLabel: UILabel!
     @IBOutlet weak var sceneView: SCNView!
@@ -28,7 +28,7 @@ public class CountryViewController: UIViewController {
         title = country.isoCode.rawValue
         gradientView?.properties = country.gradientProperties
         
-        receivedCurrencyCodeLabel?.alpha = 0
+        receiveCurrencyCodeLabel?.alpha = 0
         sendFxRateLabel?.alpha = 0
         feesChangedDateLabel?.alpha = 0
         
@@ -63,7 +63,7 @@ public class CountryViewController: UIViewController {
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.0, options: [UIViewAnimationOptions.beginFromCurrentState], animations: { [weak self] in
             guard let weakSelf = self else { return }
-            weakSelf.receivedCurrencyCodeLabel?.alpha = alpha
+            weakSelf.receiveCurrencyCodeLabel?.alpha = alpha
             weakSelf.sendFxRateLabel?.alpha = alpha
             weakSelf.feesChangedDateLabel?.alpha = alpha
             }, completion: { [weak self] completed in
@@ -98,14 +98,14 @@ public class CountryViewController: UIViewController {
     }()
     
     private func configure(for properties: Country.LoadableProperties) {
-        guard let currCode = properties.receivedCurrencyCode,
+        guard let currCode = properties.receiveCurrencyCode,
             let rate = properties.sendFxRate,
             let date = properties.feesChanged else {
                 return
         }
-        receivedCurrencyCodeLabel?.text = currCode
-        sendFxRateLabel?.text = "\((rate * 1000).rounded()/1000.0)"
-        feesChangedDateLabel?.text = CountryViewController.formatter.string(from: date)
+        receiveCurrencyCodeLabel?.text = "Rec. Currency Code: " + currCode
+        sendFxRateLabel?.text = "Send Rate: \((rate * 1000).rounded()/1000.0)"
+        feesChangedDateLabel?.text = "Changed: " + CountryViewController.formatter.string(from: date)
         
         Country.last = self.country
         

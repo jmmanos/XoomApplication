@@ -54,16 +54,13 @@ public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
         let leftCoins = 1
         let rightCoins = min(100,max(1,Int(currencyRate)))
         
-        let yRange:UInt32 = UInt32.init(truncatingBitPattern: rightCoins)*2
-        let xRange:UInt32 = 10
+        let yRange:UInt32 = UInt32(truncatingBitPattern: rightCoins)
+        let xRange:UInt32 = 30
         let zRange:UInt32 = 40
         
         for _ in 0..<leftCoins {
             let coin = createCoin()
-            
-            let yRand = arc4random() % yRange
-            let xRand = arc4random() % xRange
-            coin.position = SCNVector3(-26 - Int(xRand), 30 + Int(yRand), 0)
+            coin.position = SCNVector3(-40, 40, 0)
             
             rootNode.addChildNode(coin)
             coin.physicsBody?.applyForce(SCNVector3(0, -20, 0), asImpulse: true)
@@ -74,7 +71,7 @@ public final class CurrencyScene: SCNScene, SCNSceneRendererDelegate {
             let yRand = arc4random() % yRange
             let xRand = arc4random() % xRange
             let zRand = arc4random() % zRange
-            coin.position = SCNVector3(26 + Int(xRand), 30 + Int(yRand), -Int(zRange/2) + Int(zRand))
+            coin.position = SCNVector3(20 + Int(xRand), 40 + Int(yRand), -Int(zRange) + Int(zRand))
             
             rootNode.addChildNode(coin)
             coin.physicsBody?.applyForce(SCNVector3(0, -20, 0), asImpulse: true)

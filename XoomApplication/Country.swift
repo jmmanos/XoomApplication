@@ -14,26 +14,31 @@ import UIKit
  - persists to / loads from disk
  */
 public final class Country {
+    /// Countries ISO 3166 Country Code
     public let isoCode: CountryCode
+    
+    /// Loadable properties
     public private(set) var properties: LoadableProperties
+    
+    /// Helper to determine if API call is necessary
     public var isLoaded: Bool {
-        return properties.feesChanged != nil && properties.receivedCurrencyCode != nil && properties.feesChanged != nil
+        return properties.sendFxRate != nil && properties.receiveCurrencyCode != nil && properties.feesChanged != nil
     }
     
     /// Properties loadable from API or Disk
     public class LoadableProperties {
-        internal var receivedCurrencyCode: String?
+        internal var receiveCurrencyCode: String?
         internal var sendFxRate: Double?
         internal var feesChanged: Date?
         
-        internal init(_ receivedCurrencyCode: String?, sendFxRate: Double?, feesChanged: Date?) {
-            self.receivedCurrencyCode = receivedCurrencyCode
+        internal init(_ receiveCurrencyCode: String?, sendFxRate: Double?, feesChanged: Date?) {
+            self.receiveCurrencyCode = receiveCurrencyCode
             self.sendFxRate = sendFxRate
             self.feesChanged = feesChanged
         }
     }
     
-    ///Visual properties
+    ///Visual properties lazily set. Once created all gradient should be same
     public private(set) lazy var gradientProperties: GradientView.VisualProperties = {
         let randStart = CGFloat(arc4random() % 100)/100.0
         let randEnd = CGFloat(arc4random() % 100)/100.0
@@ -103,18 +108,16 @@ public final class Country {
     }()
     
     /// Initializer
-    public init(_ code: CountryCode, receivedCurrencyCode: String? = nil, sendFxRate: Double? = nil, feesChanged: Date? = nil) {
+    public init(_ code: CountryCode, receiveCurrencyCode: String? = nil, sendFxRate: Double? = nil, feesChanged: Date? = nil) {
         self.isoCode = code
-        self.properties = LoadableProperties(receivedCurrencyCode, sendFxRate: sendFxRate, feesChanged: feesChanged)
+        self.properties = LoadableProperties(receiveCurrencyCode, sendFxRate: sendFxRate, feesChanged: feesChanged)
     }
     
     /// Method to try to load properties
     public func load(_ handler: @escaping (APIResult<Country.LoadableProperties, Error>)->()) {
-        
         APIManager.create(for: self.isoCode) { (result:APIResult<Country.LoadableProperties, Error>) in
             switch result {
-            case let .success(properties):
-                self.properties = properties
+            case let .success(properties): self.properties = properties
             case .error: break
             }
             handler(result)
@@ -122,6 +125,7 @@ public final class Country {
     }
 }
 
+/// Equatable extension for Array methods
 extension Country: Equatable {
     public static func ==(lhs: Country, rhs: Country) -> Bool {
         return lhs.isoCode == rhs.isoCode

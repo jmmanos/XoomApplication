@@ -12,7 +12,7 @@ extension Country: Persistable {
     public func save() -> [String:Any] {
         var dict: [String:Any] = ["isoCode":isoCode.rawValue ] //as NSString]
         
-        if let currCode = properties.receivedCurrencyCode {
+        if let currCode = properties.receiveCurrencyCode {
             dict["receiveCurrencyCode"] = currCode //as NSString
         }
         if let rate = properties.sendFxRate {
@@ -25,17 +25,18 @@ extension Country: Persistable {
     }
     
     public static func load(from object: [String:Any]) throws -> Country {
-        guard let isoString = object["isoCode"] as? NSString,
-            let isoCode = CountryCode(rawValue: isoString as String) else { throw PersistableError.unknownError }
+        guard let isoString = object["isoCode"] as? String,
+            let isoCode = CountryCode(rawValue: isoString) else { throw PersistableError.unknownError }
         
         let currCode = object["receiveCurrencyCode"] as? String
         let rate = object["sendFxRate"] as? NSNumber
         let date = object["feesChanged"] as? Date
         
-        return Country(isoCode, receivedCurrencyCode: currCode, sendFxRate: rate?.doubleValue, feesChanged: date)
+        return Country(isoCode, receiveCurrencyCode: currCode, sendFxRate: rate?.doubleValue, feesChanged: date)
     }
     
-    static var last: Country? {
+    /// last country viewed, saved to UserDefaults
+    public static var last: Country? {
         get {
             guard let object = UserDefaults.standard.object(forKey: "com.Xoom.lastCountry") as? Country.PersistentObject else {
                 return nil

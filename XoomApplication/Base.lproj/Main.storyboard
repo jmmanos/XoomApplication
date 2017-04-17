@@ -13,7 +13,7 @@
         <scene sceneID="gcZ-KE-eAj">
             <objects>
                 <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="Q31-VC-qAa" customClass="CountriesCollectionViewController" customModule="XoomApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="Wun-hx-gbH">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="Wun-hx-gbH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,23 +119,23 @@
                         <viewControllerLayoutGuide type="top" id="ddp-3o-wuh"/>
                         <viewControllerLayoutGuide type="bottom" id="jFh-el-iCT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QDS-PI-CAo">
+                    <view key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="QDS-PI-CAo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRQ-Qc-uwd" customClass="GradientView" customModule="XoomApplication" customModuleProvider="target">
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRQ-Qc-uwd" customClass="GradientView" customModule="XoomApplication" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLc-tw-ZLu">
+                            <visualEffectView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLc-tw-ZLu">
                                 <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cE2-dp-cVm">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" id="cE2-dp-cVm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <sceneKitView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" playing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-n1-srb">
+                            <sceneKitView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" loops="NO" playing="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-n1-srb">
                                 <rect key="frame" x="-0.5" y="30" width="375" height="486"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </sceneKitView>
@@ -152,10 +152,10 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.40000000000000002"/>
+                                        <real key="value" value="0.29999999999999999"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -172,7 +172,7 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.29999999999999999"/>
@@ -192,7 +192,7 @@
                                         <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.29999999999999999"/>
@@ -226,7 +226,7 @@
                     <connections>
                         <outlet property="feesChangedDateLabel" destination="Brv-0a-9Aj" id="5sk-KE-JgO"/>
                         <outlet property="gradientView" destination="PRQ-Qc-uwd" id="TPU-nY-5ic"/>
-                        <outlet property="receivedCurrencyCodeLabel" destination="SV2-gN-mss" id="oHy-jR-rvd"/>
+                        <outlet property="receiveCurrencyCodeLabel" destination="SV2-gN-mss" id="pZq-ld-p5h"/>
                         <outlet property="sceneView" destination="PtJ-n1-srb" id="NIm-xG-Qgj"/>
                         <outlet property="sendFxRateLabel" destination="fIr-zK-L4z" id="IXg-4o-YGy"/>
                     </connections>
@@ -240,7 +240,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CGn-sQ-IlT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="aml-Nw-bXg">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" barStyle="black" id="aml-Nw-bXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

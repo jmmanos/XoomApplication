@@ -11,15 +11,19 @@ public struct CountryDataSource: DataSource {
     /// simple global instance
     public static let shared: CountryDataSource = CountryDataSource()
     
+    /// total count of countries
     public let count: Int
+    
     public func index(of element: Country) -> Int? {
         return allCountries.index(of: element)
     }
+    
     public subscript(i: Int) -> Country? {
         guard i >= 0 && i < count else { return nil }
         return allCountries[i]
     }
     
+    /// initialize count once for performance. Private init so shared is sole instance
     private init() {
         count = allCountries.count
     }
