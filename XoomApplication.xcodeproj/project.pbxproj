@@ -19,6 +19,9 @@
 		F02B48221EA4AD0600C407D9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48211EA4AD0600C407D9 /* DataSource.swift */; };
 		F02B48241EA4ADE700C407D9 /* Country+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */; };
 		F02B48291EA4B76700C407D9 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */; };
+		F02B482C1EA4BA1D00C407D9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482B1EA4BA1D00C407D9 /* GradientView.swift */; };
+		F02B482E1EA4BB5300C407D9 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */; };
+		F02B48301EA4C13C00C407D9 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B482F1EA4C13C00C407D9 /* CountryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		F02B48211EA4AD0600C407D9 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		F02B48231EA4ADE700C407D9 /* Country+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Country+DataSource.swift"; sourceTree = "<group>"; };
 		F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F02B482B1EA4BA1D00C407D9 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
+		F02B482F1EA4C13C00C407D9 /* CountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +95,9 @@
 		F02B47F41EA49F5B00C407D9 /* XoomApplication */ = {
 			isa = PBXGroup;
 			children = (
+				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
 				F02B48271EA4B75700C407D9 /* Views */,
 				F02B48201EA4ACE000C407D9 /* Protocols */,
-				F02B47F91EA49F5B00C407D9 /* Main.storyboard */,
 				F02B481D1EA4A80B00C407D9 /* ViewControllers */,
 				F02B481A1EA4A1E200C407D9 /* API */,
 				F02B48151EA49FE100C407D9 /* Model */,
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F02B481E1EA4A82E00C407D9 /* CountriesCollectionViewController.swift */,
+				F02B482F1EA4C13C00C407D9 /* CountryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				F02B48281EA4B76700C407D9 /* CountryCollectionViewCell.swift */,
+				F02B482B1EA4BA1D00C407D9 /* GradientView.swift */,
+				F02B482D1EA4BB5300C407D9 /* ShadowLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -267,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02B482E1EA4BB5300C407D9 /* ShadowLabel.swift in Sources */,
 				F02B48221EA4AD0600C407D9 /* DataSource.swift in Sources */,
+				F02B48301EA4C13C00C407D9 /* CountryViewController.swift in Sources */,
 				F02B48191EA4A03B00C407D9 /* CountryCode.swift in Sources */,
 				F02B481C1EA4A1F200C407D9 /* APIManager.swift in Sources */,
 				F02B48291EA4B76700C407D9 /* CountryCollectionViewCell.swift in Sources */,
@@ -275,6 +286,7 @@
 				F02B48241EA4ADE700C407D9 /* Country+DataSource.swift in Sources */,
 				F02B48171EA49FF400C407D9 /* Country.swift in Sources */,
 				F02B47F61EA49F5B00C407D9 /* AppDelegate.swift in Sources */,
+				F02B482C1EA4BA1D00C407D9 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
